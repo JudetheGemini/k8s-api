@@ -1,0 +1,9 @@
+# never commit unsealed secret material
+*.plain.yaml
+*.plaintext.yaml
+secret-*.yaml
+!sealed-*.yaml
+.env
+*.key
+*.pem
+kubeconfig*
