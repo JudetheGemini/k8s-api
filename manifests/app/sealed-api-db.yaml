@@ -1,0 +1,13 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: api-db
+  namespace: qoves-app
+spec:
+  encryptedData:
+    DATABASE_URL: AgAFlWTU5tuawzR4mT3T9VSrBQ0up25G619wVX9//GRm5mdElyAYYdTfiSQ6aXX0kA81n1qGVnz8eF1zSSv0bQWVRgSWEd6DFPX2AUOQeiEimeyAjulyLNzy0PDFxSBFd6QA+lgCtnsYJduUx+eXmhnT6qXmDgeqNAXX8GmD4FpMzw53mlU4/7FXZjJHmuUfPxR6ABQ0y4UUTox4FVfjGbNg3sGDgpi62OCW4pZ1VxIcw9CR/3CmNqZ540Wpj3w88VnftyZNgtFocMOeNMzwYC2uhTNDNp8nUA3YoR2NUuobIh5I4AEVZAeVhWvDeT5dUkyGO9jdiDaZ7D8Qjzz//Q5RmsQzaMHMLoNMkOT3BS3WeA4e8DJVAzqBK6tUX0kIIL4qdXgIyZ2NG+IwgW2izyyB+okexRSxDs0w2iv1gFWSj2IiK/HPfMdqrmPLoX855wLjYkarn91D1YbisSaFDua8i1Hpq81GCj6nphXET3kUhb0r6AoAb3PpxY4YWF9p2jaeVzWzv15ZbdW6nALLqzKELMPEsMGgUT7ZuTKEScHsFc0o4xEWvjqZ3hmBdEvIz0j/3QUMA1el1cB/zAVpF0+xtE5n3QcDgUh6GNw4nyNW2zpwFazjAF2jvkNUC7Y7cKfqpAhuQNQj/g/OZsgGjKYOJeVxRpIwC4Fr1EotfhIi+/zn1wmSg5/cNfmb27gpwCU/4WHC3SNjGhpxNSO30Pn6ZdIsCozBYfbneJVU2auodZx87TxMiZvRJOiJ2hyQo2lyLFQWiI0ZNUSgyaDiIQoArRL14RZ7TMw4738YbRTYCoX0Bgk8LglQM+OV
+  template:
+    metadata:
+      name: api-db
+      namespace: qoves-app
