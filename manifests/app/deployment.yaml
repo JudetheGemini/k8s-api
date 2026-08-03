@@ -22,6 +22,9 @@ spec:
           envFrom:
             - secretRef:
                 name: api-db
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
           livenessProbe:
             httpGet:
               path: /
@@ -45,3 +48,6 @@ spec:
             readOnlyRootFilesystem: true
             capabilities:
               drop: ["ALL"]
+      volumes:
+        - name: tmp
+          emptyDir: {}
