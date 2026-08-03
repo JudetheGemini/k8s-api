@@ -1,0 +1,21 @@
+NAME                   CLUSTER                         NAMESPACE    PROJECT  STATUS  HEALTH   SYNCPOLICY  CONDITIONS  REPO                                          PATH  TARGET
+argocd/root            https://kubernetes.default.svc  argocd       default  Synced  Healthy  Auto-Prune  <none>      https://github.com/JudetheGemini/k8s-api.git  apps  main
+argocd/sealed-secrets  https://kubernetes.default.svc  kube-system  default  Synced  Healthy  Auto-Prune  <none>      https://bitnami.github.io/sealed-secrets            2.19.1
+GROUP        KIND         NAMESPACE  NAME            ORPHANED
+argoproj.io  Application  argocd     sealed-secrets  No
+Name:               argocd/root
+Project:            default
+Server:             https://kubernetes.default.svc
+Namespace:          argocd
+URL:                https://argocd.example.com/applications/root
+Source:
+- Repo:             https://github.com/JudetheGemini/k8s-api.git
+  Target:           main
+  Path:             apps
+SyncWindow:         Sync Allowed
+Sync Policy:        Automated (Prune)
+Sync Status:        Synced to main (26612fb)
+Health Status:      Healthy
+
+GROUP        KIND         NAMESPACE  NAME            STATUS  HEALTH  HOOK  MESSAGE
+argoproj.io  Application  argocd     sealed-secrets  Synced                application.argoproj.io/sealed-secrets unchanged
