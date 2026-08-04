@@ -1,0 +1,10 @@
+NAME                   READY   STATUS    RESTARTS   AGE
+api-58b8885859-tdfs2   1/1     Running   0          24h
+api-58b8885859-w4hms   1/1     Running   0          24h
+postgres-0             1/1     Running   0          7m33s
+       List of relations
+ Schema | Name  | Type  | Owner 
+--------+-------+-------+-------
+ public | proof | table | qoves
+(1 row)
+

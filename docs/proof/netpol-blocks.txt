@@ -1,0 +1,11 @@
+Server:		10.96.0.10
+Address:	10.96.0.10:53
+
+
+Name:	postgres.qoves-app.svc.cluster.local
+Address: 10.244.205.204
+
+EXTERNAL-BLOCKED
+DB-BLOCKED
+Session ended, resume using 'kubectl attach tmp -c tmp -n qoves-app -i -t' command
+pod "tmp" deleted from qoves-app namespace

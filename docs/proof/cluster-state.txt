@@ -1,0 +1,63 @@
+NAMESPACE       NAME                                                    READY   STATUS      RESTARTS       AGE
+argocd          pod/argocd-application-controller-0                     1/1     Running     0              2d15h
+argocd          pod/argocd-applicationset-controller-76768dd8f6-tqtks   1/1     Running     0              2d15h
+argocd          pod/argocd-dex-server-7b8b96bb54-v2j9p                  1/1     Running     0              2d15h
+argocd          pod/argocd-notifications-controller-56cf9896f4-kfs85    1/1     Running     0              2d15h
+argocd          pod/argocd-redis-557bb4bb-spqld                         1/1     Running     0              2d15h
+argocd          pod/argocd-repo-server-5b8d55876-zml9j                  1/1     Running     0              2d15h
+argocd          pod/argocd-server-5bd57f5659-rwcqw                      1/1     Running     0              2d15h
+cnitest         pod/prober                                              1/1     Running     22 (55m ago)   2d16h
+cnitest         pod/victim                                              1/1     Running     0              2d16h
+ingress-nginx   pod/ingress-nginx-admission-create-5cprw                0/1     Completed   0              2d15h
+ingress-nginx   pod/ingress-nginx-admission-patch-zd42n                 0/1     Completed   1              2d15h
+ingress-nginx   pod/ingress-nginx-controller-596f8778bc-td9cw           1/1     Running     0              2d15h
+kube-system     pod/calico-kube-controllers-565c89d6df-65nq2            1/1     Running     0              2d16h
+kube-system     pod/calico-node-8z5xp                                   1/1     Running     0              2d16h
+kube-system     pod/calico-node-pgrbl                                   1/1     Running     0              2d16h
+kube-system     pod/coredns-7d764666f9-48789                            1/1     Running     0              2d16h
+kube-system     pod/etcd-minikube                                       1/1     Running     0              2d16h
+kube-system     pod/kube-apiserver-minikube                             1/1     Running     0              2d16h
+kube-system     pod/kube-controller-manager-minikube                    1/1     Running     0              2d16h
+kube-system     pod/kube-proxy-c4jjf                                    1/1     Running     0              2d16h
+kube-system     pod/kube-proxy-hdrrl                                    1/1     Running     0              2d16h
+kube-system     pod/kube-scheduler-minikube                             1/1     Running     0              2d16h
+kube-system     pod/metrics-server-9d74bb658-jpqm8                      1/1     Running     0              2d15h
+kube-system     pod/sealed-secrets-controller-74d5bcfff-xj7d2           1/1     Running     0              2d14h
+kube-system     pod/storage-provisioner                                 1/1     Running     1 (148m ago)   2d16h
+qoves-app       pod/api-58b8885859-tdfs2                                1/1     Running     0              24h
+qoves-app       pod/api-58b8885859-w4hms                                1/1     Running     0              24h
+qoves-app       pod/postgres-0                                          1/1     Running     0              24h
+
+NAMESPACE       NAME                                         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+argocd          service/argocd-applicationset-controller     ClusterIP   10.111.24.39     <none>        7000/TCP                     2d15h
+argocd          service/argocd-dex-server                    ClusterIP   10.111.213.186   <none>        5556/TCP,5557/TCP            2d15h
+argocd          service/argocd-redis                         ClusterIP   10.102.76.242    <none>        6379/TCP                     2d15h
+argocd          service/argocd-repo-server                   ClusterIP   10.106.219.61    <none>        8081/TCP                     2d15h
+argocd          service/argocd-server                        ClusterIP   10.111.249.251   <none>        80/TCP,443/TCP               2d15h
+cnitest         service/victim                               ClusterIP   10.99.95.206     <none>        80/TCP                       2d16h
+default         service/kubernetes                           ClusterIP   10.96.0.1        <none>        443/TCP                      2d16h
+ingress-nginx   service/ingress-nginx-controller             NodePort    10.106.72.149    <none>        80:31638/TCP,443:30127/TCP   2d15h
+ingress-nginx   service/ingress-nginx-controller-admission   ClusterIP   10.101.230.80    <none>        443/TCP                      2d15h
+kube-system     service/kube-dns                             ClusterIP   10.96.0.10       <none>        53/UDP,53/TCP,9153/TCP       2d16h
+kube-system     service/metrics-server                       ClusterIP   10.105.125.148   <none>        443/TCP                      2d15h
+kube-system     service/sealed-secrets-controller            ClusterIP   10.96.181.226    <none>        8080/TCP                     2d14h
+kube-system     service/sealed-secrets-controller-metrics    ClusterIP   10.103.105.15    <none>        8081/TCP                     2d14h
+qoves-app       service/api                                  ClusterIP   10.96.230.107    <none>        80/TCP                       24h
+qoves-app       service/postgres                             ClusterIP   None             <none>        5432/TCP                     24h
+
+NAMESPACE   NAME                            CLASS   HOSTS         ADDRESS        PORTS   AGE
+qoves-app   ingress.networking.k8s.io/api   nginx   qoves.local   192.168.49.2   80      24h
+
+NAMESPACE   NAME                                                                  POD-SELECTOR                                                                               AGE
+argocd      networkpolicy.networking.k8s.io/argocd-application-controller         app.kubernetes.io/instance=argocd,app.kubernetes.io/name=argocd-application-controller     2d15h
+argocd      networkpolicy.networking.k8s.io/argocd-dex-server                     app.kubernetes.io/instance=argocd,app.kubernetes.io/name=argocd-dex-server                 2d15h
+argocd      networkpolicy.networking.k8s.io/argocd-notifications-controller       app.kubernetes.io/instance=argocd,app.kubernetes.io/name=argocd-notifications-controller   2d15h
+argocd      networkpolicy.networking.k8s.io/argocd-redis                          app.kubernetes.io/instance=argocd,app.kubernetes.io/name=argocd-redis                      2d15h
+argocd      networkpolicy.networking.k8s.io/argocd-repo-server                    app.kubernetes.io/instance=argocd,app.kubernetes.io/name=argocd-repo-server                2d15h
+argocd      networkpolicy.networking.k8s.io/argocd-server                         app.kubernetes.io/instance=argocd,app.kubernetes.io/name=argocd-server                     2d15h
+cnitest     networkpolicy.networking.k8s.io/default-deny                          <none>                                                                                     2d16h
+qoves-app   networkpolicy.networking.k8s.io/allow-dns-egress                      <none>                                                                                     33m
+qoves-app   networkpolicy.networking.k8s.io/api-egress-to-postgres                app=api                                                                                    33m
+qoves-app   networkpolicy.networking.k8s.io/api-ingress-from-ingress-controller   app=api                                                                                    33m
+qoves-app   networkpolicy.networking.k8s.io/default-deny                          <none>                                                                                     33m
+qoves-app   networkpolicy.networking.k8s.io/postgres-ingress-from-api             app=postgres                                                                               33m

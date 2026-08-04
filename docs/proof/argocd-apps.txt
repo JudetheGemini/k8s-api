@@ -1,4 +1,5 @@
 NAME                   CLUSTER                         NAMESPACE    PROJECT  STATUS  HEALTH   SYNCPOLICY  CONDITIONS  REPO                                          PATH                 TARGET
+argocd/api             https://kubernetes.default.svc  qoves-app    default  Synced  Healthy  Auto-Prune  <none>      https://github.com/JudetheGemini/k8s-api.git  manifests/app        main
 argocd/namespace       https://kubernetes.default.svc  qoves-app    default  Synced  Healthy  Auto-Prune  <none>      https://github.com/JudetheGemini/k8s-api.git  manifests/namespace  main
 argocd/postgres        https://kubernetes.default.svc  qoves-app    default  Synced  Healthy  Auto-Prune  <none>      https://github.com/JudetheGemini/k8s-api.git  manifests/postgres   main
 argocd/root            https://kubernetes.default.svc  argocd       default  Synced  Healthy  Auto-Prune  <none>      https://github.com/JudetheGemini/k8s-api.git  apps                 main
