@@ -4,6 +4,14 @@ Repo: https://github.com/JudetheGemini/k8s-api
 
 ---
 
+# QOVES Take-Home — Senior DevOps
+
+A self-managed Kubernetes platform for the provided trivial API: GitOps delivery via
+ArgoCD app-of-apps, default-deny NetworkPolicies, secrets sealed rather than committed,
+and Postgres on a PersistentVolumeClaim. Built against the QOVES Task 1 brief, August 2026.
+
+---
+
 ## 1. Run it
 
 ### From scratch
